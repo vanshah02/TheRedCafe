@@ -1,0 +1,659 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    scroll-behavior: smooth;
+    font-family:sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;  /*allows you to choose quality of text over speed. */
+    overflow-x:hidden;
+}
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.3)), linear-gradient(rgba(0,0,0,0.5)), url(img/coverpage.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color:whitesmoke;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+h1{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+    font-size: 240%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.btn{
+    display: inline-block;
+    margin-right: 20px;
+    padding: 20px 30px;
+    text-decoration: none;
+    font-weight: 300;
+    color:coral;
+    transition: background-color 0.2s, color 0.2s ;
+}
+
+.btn-full{
+    background-color: transparent;
+    border: 2px solid #e67e2e;
+    border-radius: 200px;
+
+}
+   
+
+.btn-ghost{
+     background-color:transparent; 
+    border: 2px solid #e67e2e ;
+    border-radius: 200px;
+}
+
+.btn-full:hover{
+   background-color: #e67e2e;
+    border: 2px solid #e67e2e;
+    border-radius: 200px;
+    color: black;
+    transform: scale(1.1);
+}
+
+.btn-ghost:hover{
+    background-color: #e67e2e;
+    border: 2px solid #e67e2e;
+    border-radius: 200px;
+    color: black;
+    transform: scale(1.1);
+}
+
+.logo{
+    height: 180px;
+    width: 180px;;
+    float: left;
+    margin: 40px;
+    transition: 0.3s;
+}
+
+.logo:hover{
+    transform:scale(1.1)
+}
+
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 50px;
+    
+}
+
+.main-nav li{
+    display: inline-block;
+    /* margin: 30px; */
+    /* margin-right:20px ; */
+    padding: 20px;
+}
+
+.main-nav li a {
+    padding: 10px;
+    text-decoration: none;
+    color: antiquewhite;
+    background-color:black;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+
+}
+
+.main-nav li a:hover {
+    color:#e67e2e; 
+    transform: scale(1.5);
+    border: 3px solid #e67e2e;
+}
+
+section
+{
+    margin: 50px;
+    padding: 80px 0;
+}
+
+h2{
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;    
+}
+
+h2::after{
+    display: block;
+    height: 2px;
+    background-color: #e67e2e;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.long-copy{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+
+.box {
+    padding: 20px;
+    border: 2px solid #e67e22;
+    border-radius: 8px;
+    flex: 1; /* Makes boxes equal width */
+    min-width: 0; /* Allows boxes to shrink if needed */
+}
+
+.row-features{
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+
+h3{
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+.box p{
+    font-size: 90%;
+    line-height: 145%;
+     border: 2px solid #e67e22;   /* adds an orange border */
+    padding: 10px;               /* adds space inside the border */
+    border-radius: 8px;          /* optional – rounded corners */
+    background-color: #fff8f0; 
+}
+
+.icon-big{
+    font-size: 250%;
+    display: block;
+    color: #e67e2e;
+    margin-bottom: 10px;
+}
+
+.meals-showcase{
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.meals-showcase li{
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo{
+    width: 100%;
+    margin: 0%;
+    overflow: hidden;
+    background-color: #000;
+    transition: transform 0.5s opacity 0.5s;
+}
+
+.meal-photo img{
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+    display: block;
+    transform: scale(1.15);
+    opacity: 0.7;
+}
+
+.section-meals{
+    padding: 0%;
+}
+
+.section-features{
+    background-color:lightgoldenrodyellow;
+}
+
+.meal-photo img:hover{
+    transform: scale(1.01);
+    opacity: 1;
+}
+
+
+.works-step{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-right: 25px;
+    gap: 15px;
+}
+
+.steps-box:first-child{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-right: 3%;
+    margin-top: 20px;
+}
+
+.steps-box:last-child{
+    padding-left: 3%;
+    margin-top: 40px;
+
+}
+
+.app-screen {
+    width: 260px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px;
+}
+
+.section-how
+{
+    background-color:lightgrey;
+}
+
+.works-step div{
+    color: #e67e22;
+    border: 4px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 120%;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-right:5px;
+} 
+
+
+.works-step:last-of-type{
+    margin-bottom: 80px;
+}
+
+.btn-app img{
+    height: 100px;
+    width: auto;
+    margin-right: 10px;
+}
+
+
+.btn-app{
+    border: 0;
+}
+
+
+.section-steps {
+    padding: 40px 0;
+    background-color: antiquewhite;
+}
+
+.box img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;    
+}
+
+.city-feature{
+    margin-bottom: 5px;
+}
+
+.icon-small{
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    line-height: 120%;
+    font-size: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+a{
+    color:blue;
+    text-decoration: none;
+    border-bottom: 1px solid #e67e22;
+    padding-bottom: 1px;
+}
+
+a:hover{
+    color:#e67e22;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s, color 0.5s;
+}
+
+.section-cities{
+    padding: 40px 0;
+    background-color: bisque;
+}
+
+
+.section-testimonials{
+    background-color: gold;
+}
+
+blockquote{
+    padding: 2%;
+    font-style: italic;
+    line-height: 125%;
+    margin-top: 40px;
+    position: relative;
+}
+
+cite{
+    font-size: 90%;
+    display: block;
+    margin-top: 25%;
+}
+
+.section-testimonials cite {
+    margin-top: 0;
+}
+
+/* We add .section-testimonials to make this rule "stronger" */
+.section-testimonials cite img {
+    height: 125px;
+    width: 125px;         
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+    object-fit: cover; 
+    
+    /* This overrides the margin-bottom: 15px; from the .box img rule */
+    margin-bottom: 0;  
+}
+
+
+.section-testimonials blockquote {
+    /* Make the blockquote fill the entire box */
+    height: 100%;
+    
+    /* Turn it into a flex container */
+    display: flex;
+    flex-direction: column;
+    
+    /* This pushes the text to the top and the <cite> to the bottom */
+    justify-content: space-between;
+
+    /* --- ADD THIS LINE --- */
+    /* This overrides the 'margin-top: 40px' from your general rule */
+    margin: 0; 
+    padding-top: 35px;
+    padding-bottom: 2%;
+    padding-right: 2%;
+    padding-left: 50px;
+    font-size: 90%;
+}
+
+
+blockquote::before{
+    content: '\201C';
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -15px;
+    left: -3px;
+    top: 2%;
+    line-height: 1;
+}
+
+.section-plans{
+    background-color:darkgray;
+}
+
+.plan-box{
+    background-color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    /* margin-left: 2%;
+    margin-right: 2%;
+    margin: 2%; */
+    border: 2px solid #e67e22;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.plan-box div{
+    padding: 10px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.section-plans .row-features > div {
+    flex: 1; /* Makes each column (the .col.span-1-of-3) take up equal space */
+}
+
+.plan-box > div:first-child {
+    padding: 10px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-box > div:nth-child(2) {
+    padding: 10px;
+    border-bottom: 1px solid #e8e8e8;
+    flex-grow: 1; /* This makes the middle section expand */
+}
+
+.plan-box > div:last-child {
+    padding: 10px;
+    text-align: center;
+}
+
+.plan-price{
+    font-size: 100%;
+    margin-bottom: 10px;
+    font-weight: 10;
+    color: #e67e22;
+}
+
+.plan-box ul{
+    list-style: none;
+}
+
+.plan-box ul li{
+    padding: 5px 0;
+}
+
+.section-form{
+    background-color:bisque;
+}
+
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+}
+
+ .section-form .contact-form .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-form .contact-form .col.span-1-of-3{
+    flex: 0 0 30%;
+    text-align: left;                        
+} 
+
+.section-form .contact-form .col.span-2-of-3{
+    flex: 1;
+}
+
+.section-form .contact-form .col{
+    float: none;
+}
+
+
+
+.section-form input[type="text"],
+.section-form input[type="email"],
+.section-form select,
+.section-form textarea{
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea{
+    height: 150px;
+}
+
+.section-form input[type="checkbox"]{
+    margin: 10px 5px 10px 0;
+    width: 20px;        /* bigger box */
+    height: 20px;       /* bigger box */
+    transform: scale(1.2);   /* extra scaling */
+    accent-color: #e67e22;   /* orange tick / box color (modern browsers) */
+}
+
+
+input[type=submit]{
+    cursor: pointer;
+    border-radius: 200px;
+    padding: 12px 30px;
+    font-size: 85%;
+    border: 2px solid #e67e2e;
+    background-color: transparent;
+    color: #e67e2e;
+    transition: background-color 0.2s, transform 0.2s, color 0.2s;
+}
+
+input[type=submit]:hover{
+    background-color: #e67e2e;
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* Make the submit button identical to Sign up button */
+.submit-btn {
+    cursor: pointer;
+    border-radius: 200px;
+    padding: 12px 30px;
+    font-size: 85%;
+    border: 2px solid #e67e2e;
+    background-color: transparent;
+    color: #e67e2e;
+    transition: background-color 0.2s, transform 0.2s, color 0.2s;
+}
+
+footer{
+    background-color: #333;
+    font-size:90%;
+    padding: 40px 0;
+}
+
+footer .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .footer-nav{
+    list-style: none;
+    float: left;
+}
+
+.social-links{
+    list-style: none;
+    float: right;
+} */
+
+.footer-nav,
+.social-links {
+    font-size: 130%;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav li, .social-links li{
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.footer-nav li a:link, .footer-nav li a:visited, .social-links li a:link, .social-links li a:visited
+{
+    text-decoration: none;
+    border: 0;
+    color: #888;
+}
+
+.footer-nav li a:hover{
+    color: #e67e22;
+}
+
+footer p{
+    color: #888;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 120%;
+    margin-top: 25px;
+}
+
+footer .row:last-child {
+    display: flex;
+    justify-content: center;
+}
+
+.fb:hover{
+    color:#3b5998 ;
+}
+
+.insta:hover{
+    color: deeppink;
+}
+
+.twitter:hover{
+    color: blue;
+}
+
+.google:hover{
+    color: #e67e22;
+}
+
+.social-links li a:link, .social-links li a:visited{
+    font-size:160% ;
+}
+
+.social-links ion-icon {
+    margin-right: 25px;
+    font-size: 250%; /* bigger icons */
+}
+
+
